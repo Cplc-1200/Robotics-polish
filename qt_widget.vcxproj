@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C2E27489-9760-33F6-A3CF-41267E2EC8CE}</ProjectGuid>
+    <RootNamespace>qt_widget</RootNamespace>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.22000.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>qt_widget</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>qt_widget</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>debug\</OutDir>
+    <IntDir>debug\</IntDir>
+    <TargetName>qt_widget</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <ExecutablePath>C:\Users\26493\Desktop\stl\11111\QT_helmet\pcl1.13.0\bin;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>release\</OutDir>
+    <IntDir>release\</IntDir>
+    <TargetName>qt_widget</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>6.2.4</QtInstall>
+    <QtModules>core;gui;network;widgets;core5compat;concurrent;opengl;openglwidgets;serialbus;serialport</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>6.2.4</QtInstall>
+    <QtModules>core;gui;network;widgets;concurrent;opengl;openglwidgets;serialbus;serialport</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;..\PCL1.13.0\include\pcl-1.13;..\PCL1.13.0\include\pcl-1.13\pcl;..\PCL1.13.0\3rdParty\Boost\include\boost-1_80;..\PCL1.13.0\3rdParty\Eigen\eigen3;..\PCL1.13.0\3rdParty\FLANN\include;..\PCL1.13.0\3rdParty\FLANN\include\flann;..\PCL1.13.0\3rdParty\OpenNI2\Include;..\PCL1.13.0\3rdParty\Qhull\include;..\PCL1.13.0\3rdParty\VTK\include\vtk-9.2;release;/include;C:\Users\26493\AppData\Local\Programs\MVTec\HALCON-21.05-Progress\include;D:\1software\libigl\libigl\include;..\epiceye3_sdk-v3.1.0\cpp\sdk\include;..\CCCoreLib\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr /arch:AVX -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458   /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;NDEBUG;QT_NO_DEBUG;CC_CORE_LIB_USES_FLOAT;__APPLE__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\PCL1.13.0\lib\pcl_common.lib;..\PCL1.13.0\lib\pcl_features.lib;..\PCL1.13.0\lib\pcl_filters.lib;..\PCL1.13.0\lib\pcl_io.lib;..\PCL1.13.0\lib\pcl_io_ply.lib;..\PCL1.13.0\lib\pcl_kdtree.lib;..\PCL1.13.0\lib\pcl_keypoints.lib;..\PCL1.13.0\lib\pcl_ml.lib;..\PCL1.13.0\lib\pcl_octree.lib;..\PCL1.13.0\lib\pcl_outofcore.lib;..\PCL1.13.0\lib\pcl_people.lib;..\PCL1.13.0\lib\pcl_recognition.lib;..\PCL1.13.0\lib\pcl_registration.lib;..\PCL1.13.0\lib\pcl_sample_consensus.lib;..\PCL1.13.0\lib\pcl_search.lib;..\PCL1.13.0\lib\pcl_segmentation.lib;..\PCL1.13.0\lib\pcl_stereo.lib;..\PCL1.13.0\lib\pcl_surface.lib;..\PCL1.13.0\lib\pcl_tracking.lib;..\PCL1.13.0\lib\pcl_visualization.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_atomic-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_bzip2-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_chrono-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_container-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_context-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_contract-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_coroutine-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_date_time-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_exception-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_fiber-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_filesystem-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_graph-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_graph_parallel-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_iostreams-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_json-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_locale-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_log-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_log_setup-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_math_c99-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_math_c99f-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_math_c99l-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_math_tr1-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_math_tr1f-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_math_tr1l-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_mpi-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_nowide-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_numpy310-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_prg_exec_monitor-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_program_options-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_python310-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_random-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_regex-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_serialization-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_stacktrace_noop-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_stacktrace_windbg-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_stacktrace_windbg_cached-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_system-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_test_exec_monitor-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_thread-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_timer-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_type_erasure-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_unit_test_framework-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_wave-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_wserialization-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_zlib-vc143-mt-x64-1_80.lib;..\PCL1.13.0\3rdParty\FLANN\lib\flann.lib;..\PCL1.13.0\3rdParty\FLANN\lib\flann_cpp.lib;..\PCL1.13.0\3rdParty\FLANN\lib\flann_cpp_s.lib;..\PCL1.13.0\3rdParty\FLANN\lib\flann_s.lib;..\PCL1.13.0\3rdParty\OpenNI2\Lib\OpenNI2.lib;..\PCL1.13.0\3rdParty\Qhull\lib\qhullcpp.lib;..\PCL1.13.0\3rdParty\Qhull\lib\qhullstatic.lib;..\PCL1.13.0\3rdParty\Qhull\lib\qhullstatic_r.lib;..\PCL1.13.0\3rdParty\Qhull\lib\qhull_r.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkcgns-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkChartsCore-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonColor-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonComputationalGeometry-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonCore-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonDataModel-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonExecutionModel-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonMath-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonMisc-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonSystem-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonTransforms-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkDICOMParser-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkDomainsChemistry-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkDomainsChemistryOpenGL2-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkdoubleconversion-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkexodusII-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkexpat-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersAMR-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersCore-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersExtraction-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersFlowPaths-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersGeneral-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersGeneric-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersGeometry-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersHybrid-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersHyperTree-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersImaging-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersModeling-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersParallel-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersParallelImaging-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersPoints-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersProgrammable-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersSelection-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersSMP-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersSources-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersStatistics-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersTexture-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersTopology-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersVerdict-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkfmt-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkfreetype-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkGeovisCore-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkgl2ps-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkglew-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkGUISupportQt-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkGUISupportQtQuick-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkGUISupportQtSQL-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkhdf5-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkhdf5_hl-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingColor-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingCore-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingFourier-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingGeneral-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingHybrid-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingMath-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingMorphological-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingSources-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingStatistics-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingStencil-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkInfovisCore-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkInfovisLayout-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkInteractionImage-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkInteractionStyle-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkInteractionWidgets-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOAMR-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOAsynchronous-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOCesium3DTiles-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOCGNSReader-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOChemistry-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOCityGML-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOCONVERGECFD-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOCore-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOEnSight-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOExodus-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOExport-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOExportGL2PS-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOExportPDF-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOGeometry-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOHDF-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOImage-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOImport-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOInfovis-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOIOSS-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOLegacy-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOLSDyna-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOMINC-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOMotionFX-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOMovie-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIONetCDF-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOOggTheora-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOParallel-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOParallelXML-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOPLY-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOSegY-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOSQL-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkioss-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOTecplotTable-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOVeraOut-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOVideo-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOXML-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOXMLParser-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkjpeg-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkjsoncpp-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkkissfft-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtklibharu-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtklibproj-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtklibxml2-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkloguru-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtklz4-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtklzma-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkmetaio-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtknetcdf-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkogg-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkParallelCore-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkParallelDIY-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkpng-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkpugixml-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingAnnotation-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingContext2D-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingContextOpenGL2-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingCore-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingFreeType-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingGL2PSOpenGL2-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingHyperTreeGrid-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingImage-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingLabel-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingLICOpenGL2-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingLOD-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingOpenGL2-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingQt-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingSceneGraph-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingUI-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingVolume-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingVolumeOpenGL2-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingVtkJS-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtksqlite-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtksys-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkTestingRendering-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtktheora-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtktiff-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkverdict-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkViewsContext2D-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkViewsCore-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkViewsInfovis-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkViewsQt-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkWrappingTools-9.2.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkzlib-9.2.lib;$(QTDIR)\lib\Qt6EntryPoint.lib;shell32.lib;..\epiceye3_sdk-v3.1.0\cpp\sdk\build\Release\EpicEyeCppSDK.lib;C:\Users\26493\AppData\Local\Programs\MVTec\HALCON-21.05-Progress\lib\x64-win64\halconcpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\PCL1.13.0\lib;..\PCL1.13.0\3rdParty\Boost\lib;..\PCL1.13.0\3rdParty\FLANN\lib;..\PCL1.13.0\3rdParty\OpenNI2\Lib;..\PCL1.13.0\3rdParty\Qhull\lib;..\PCL1.13.0\3rdParty\VTK\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\qt_widget.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;NDEBUG;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>$(IntDir)uic\</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;..\PCL1.13.0\include\pcl-1.13;..\PCL1.13.0\include\pcl-1.13\pcl;..\PCL1.13.0\3rdParty\Boost\include\boost-1_80;..\PCL1.13.0\3rdParty\Eigen\eigen3;..\PCL1.13.0\3rdParty\FLANN\include;..\PCL1.13.0\3rdParty\FLANN\include\flann;..\PCL1.13.0\3rdParty\OpenNI2\Include;..\PCL1.13.0\3rdParty\Qhull\include;..\PCL1.13.0\3rdParty\VTK\include\vtk-9.2;debug;/include;..\epiceye3_sdk-v3.1.0\cpp\sdk\include;D:\1software\libigl\libigl\include;C:\Users\26493\Desktop\stl\11111\QT_helmet\CCCoreLib\install\include;C:\Users\26493\AppData\Local\Programs\MVTec\HALCON-21.05-Progress\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr /arch:AVX -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458  /bigobj     %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;CC_CORE_LIB_USES_FLOAT;__APPLE__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <ConformanceMode>Default</ConformanceMode>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\PCL1.13.0\lib\pcl_commond.lib;..\PCL1.13.0\lib\pcl_featuresd.lib;..\PCL1.13.0\lib\pcl_filtersd.lib;..\PCL1.13.0\lib\pcl_iod.lib;..\PCL1.13.0\lib\pcl_io_plyd.lib;..\PCL1.13.0\lib\pcl_kdtreed.lib;..\PCL1.13.0\lib\pcl_keypointsd.lib;..\PCL1.13.0\lib\pcl_mld.lib;..\PCL1.13.0\lib\pcl_octreed.lib;..\PCL1.13.0\lib\pcl_outofcored.lib;..\PCL1.13.0\lib\pcl_peopled.lib;..\PCL1.13.0\lib\pcl_recognitiond.lib;..\PCL1.13.0\lib\pcl_registrationd.lib;..\PCL1.13.0\lib\pcl_sample_consensusd.lib;..\PCL1.13.0\lib\pcl_searchd.lib;..\PCL1.13.0\lib\pcl_segmentationd.lib;..\PCL1.13.0\lib\pcl_stereod.lib;..\PCL1.13.0\lib\pcl_surfaced.lib;..\PCL1.13.0\lib\pcl_trackingd.lib;..\PCL1.13.0\lib\pcl_visualizationd.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_atomic-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_bzip2-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_chrono-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_container-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_context-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_contract-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_coroutine-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_date_time-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_exception-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_fiber-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_filesystem-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_graph-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_graph_parallel-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_iostreams-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_json-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_locale-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_log-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_log_setup-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_math_c99-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_math_c99f-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_math_c99l-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_math_tr1-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_math_tr1f-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_math_tr1l-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_mpi-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_nowide-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_numpy310-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_prg_exec_monitor-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_program_options-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_python310-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_random-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_regex-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_serialization-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_stacktrace_noop-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_stacktrace_windbg-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_stacktrace_windbg_cached-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_system-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_test_exec_monitor-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_thread-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_timer-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_type_erasure-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_unit_test_framework-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_wave-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_wserialization-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\Boost\lib\libboost_zlib-vc143-mt-gd-x64-1_80.lib;..\PCL1.13.0\3rdParty\FLANN\lib\flann-gd.lib;..\PCL1.13.0\3rdParty\FLANN\lib\flann_cpp-gd.lib;..\PCL1.13.0\3rdParty\FLANN\lib\flann_cpp_s-gd.lib;..\PCL1.13.0\3rdParty\FLANN\lib\flann_s-gd.lib;..\PCL1.13.0\3rdParty\OpenNI2\Lib\OpenNI2.lib;..\PCL1.13.0\3rdParty\Qhull\lib\qhullcpp_d.lib;..\PCL1.13.0\3rdParty\Qhull\lib\qhullstatic_d.lib;..\PCL1.13.0\3rdParty\Qhull\lib\qhullstatic_rd.lib;..\PCL1.13.0\3rdParty\Qhull\lib\qhull_rd.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkcgns-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkChartsCore-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonColor-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonComputationalGeometry-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonCore-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonDataModel-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonExecutionModel-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonMath-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonMisc-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonSystem-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkCommonTransforms-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkDICOMParser-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkDomainsChemistry-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkDomainsChemistryOpenGL2-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkdoubleconversion-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkexodusII-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkexpat-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersAMR-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersCore-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersExtraction-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersFlowPaths-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersGeneral-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersGeneric-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersGeometry-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersHybrid-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersHyperTree-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersImaging-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersModeling-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersParallel-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersParallelImaging-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersPoints-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersProgrammable-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersSelection-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersSMP-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersSources-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersStatistics-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersTexture-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersTopology-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkFiltersVerdict-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkfmt-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkfreetype-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkGeovisCore-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkgl2ps-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkglew-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkGUISupportQt-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkGUISupportQtQuick-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkGUISupportQtSQL-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkhdf5-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkhdf5_hl-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingColor-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingCore-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingFourier-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingGeneral-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingHybrid-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingMath-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingMorphological-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingSources-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingStatistics-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkImagingStencil-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkInfovisCore-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkInfovisLayout-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkInteractionImage-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkInteractionStyle-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkInteractionWidgets-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOAMR-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOAsynchronous-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOCesium3DTiles-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOCGNSReader-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOChemistry-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOCityGML-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOCONVERGECFD-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOCore-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOEnSight-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOExodus-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOExport-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOExportGL2PS-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOExportPDF-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOGeometry-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOHDF-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOImage-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOImport-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOInfovis-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOIOSS-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOLegacy-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOLSDyna-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOMINC-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOMotionFX-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOMovie-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIONetCDF-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOOggTheora-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOParallel-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOParallelXML-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOPLY-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOSegY-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOSQL-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkioss-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOTecplotTable-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOVeraOut-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOVideo-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOXML-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkIOXMLParser-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkjpeg-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkjsoncpp-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkkissfft-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtklibharu-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtklibproj-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtklibxml2-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkloguru-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtklz4-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtklzma-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkmetaio-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtknetcdf-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkogg-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkParallelCore-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkParallelDIY-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkpng-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkpugixml-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingAnnotation-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingContext2D-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingContextOpenGL2-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingCore-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingFreeType-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingGL2PSOpenGL2-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingHyperTreeGrid-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingImage-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingLabel-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingLICOpenGL2-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingLOD-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingOpenGL2-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingQt-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingSceneGraph-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingUI-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingVolume-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingVolumeOpenGL2-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkRenderingVtkJS-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtksqlite-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtksys-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkTestingRendering-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtktheora-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtktiff-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkverdict-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkViewsContext2D-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkViewsCore-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkViewsInfovis-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkViewsQt-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkWrappingTools-9.2d.lib;..\PCL1.13.0\3rdParty\VTK\lib\vtkzlib-9.2d.lib;$(QTDIR)\lib\Qt6EntryPointd.lib;shell32.lib;..\epiceye3_sdk-v3.1.0\cpp\sdk\lib\EpicEyeCppSDK.lib;..\CCCoreLib\install\lib\CCCoreLibd.lib;C:\Users\26493\AppData\Local\Programs\MVTec\HALCON-21.05-Progress\lib\x64-win64\halconcpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\PCL1.13.0\lib;..\PCL1.13.0\3rdParty\Boost\lib;..\PCL1.13.0\3rdParty\FLANN\lib;..\PCL1.13.0\3rdParty\OpenNI2\Lib;..\PCL1.13.0\3rdParty\Qhull\lib;..\PCL1.13.0\3rdParty\VTK\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\qt_widget.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>$(IntDir)uic\</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="halcon_PPF.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="pcl_function.cpp" />
+    <ClCompile Include="get_cameradata.cpp" />
+    <ClCompile Include="TcpClient.cpp" />
+    <ClCompile Include="Visualize.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="mainwindow.h">
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr /arch:AVX -Zi -MDd -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr /arch:AVX -O2 -MD -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="mainwindow.ui">
+      <QtUicDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)uic\</QtUicDir>
+      <QtUicDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)uic\</QtUicDir>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="get_cameradata.h" />
+    <ClInclude Include="halcon_PPF.h" />
+    <ClInclude Include="pcl_function.h" />
+    <QtMoc Include="TcpClient.h" />
+    <ClInclude Include="Visualize.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

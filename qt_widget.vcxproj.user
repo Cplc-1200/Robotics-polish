@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerEnvironment>PATH=C:\Users\26493\Desktop\stl\11111\QT_helmet\pcl1.13.0\bin;
+C:\Users\26493\Desktop\stl\11111\QT_helmet\pcl1.13.0\3rdParty\VTK\bin;
+$(ProjectDir)..\pcl1.13.0\3rdParty\FLANN\bin;
+$(ProjectDir)..\pcl1.13.0\3rdParty\OpenNI2\Redist;
+$(ProjectDir)..\pcl1.13.0\3rdParty\OpenNI2\Tools;
+$(ProjectDir)..\pcl1.13.0\3rdParty\Qhull\bin;
+$(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtLastBackgroundBuild>2023-12-27T01:25:35.2930023Z</QtLastBackgroundBuild>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtLastBackgroundBuild>2023-12-27T01:25:35.5268295Z</QtLastBackgroundBuild>
+  </PropertyGroup>
+</Project>
